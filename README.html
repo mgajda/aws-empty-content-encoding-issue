@@ -1,0 +1,6 @@
+<h1 id="aws-empty-content-encoding-issue">aws-empty-content-encoding-issue</h1>
+<p>This illustrates issue #537 and #536 with Amazonka and S3 API.</p>
+<p>https://github.com/brendanhay/amazonka/issues/537 https://github.com/brendanhay/amazonka/issues/536</p>
+<h2 id="installation">Installation</h2>
+<p>This should suffice to replicate issue: 1. Install Haskell Stack: <code>curl -sSL https://get.haskellstack.org/ | sh</code> 2. <code>git clone https://github.com/mgajda/aws-empty-content-encoding-issue.git</code> 3. <code>cd aws-empty-content-encoding-issue</code> 4. <code>stack build</code> 5. <code>stack run</code></p>
+<p>Check that metadata for the new file is <code>Content-Encoding:</code> (empty string).</p>
