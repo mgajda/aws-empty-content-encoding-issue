@@ -17,8 +17,8 @@ main = do
   runResourceT $ runAWS env $
     within Frankfurt $ do
       --content <- liftIO $ BSL.readFile "public/index.html" -- this works
-      content <- chunkedFile 8192 "README.html" -- this results in empty metadata
-      result  <- send $ set poContentType     (Just "text/markdown")
-               -- $ set poContentEncoding (Just "identity") -- this breaks signing
-               $ putObject bucketName (ObjectKey "problem.html") (toBody content)
+      content <- chunkedFile 65000 "cryptogame.svg" -- this results in empty metadata
+      result  <- send $ set poContentType     (Just "image/svg+xml")
+               $ set poContentEncoding (Just "identity") -- this breaks signing
+               $ putObject bucketName (ObjectKey "problem2.svg") (toBody content)
       liftIO   $ print result
