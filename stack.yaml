@@ -1,4 +1,12 @@
 resolver: lts-13.30
 packages:
 - .
+extra-deps:
+- git: https://github.com/mgajda/amazonka.git
+  commit: 38b19585c670e2496b1007980a9cf7cc2497ccee
+  #commit: a52c38d078f9adc383b93e91f3fb31e142d7d551
+  subdirs:
+    - core # amazonka-core
+    - amazonka
+    - amazonka-s3
 

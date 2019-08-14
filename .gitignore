@@ -1,3 +1,4 @@
 .stack-work/
 aws-empty-content-encoding-issue.cabal
 *~
+node_modules
